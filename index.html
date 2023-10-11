@@ -3,14 +3,28 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Geolocation AR WebApp</title>
-    <script src="node_modules/aframe/dist/aframe-master.js"></script>
-    <script src="node_modules/ar.js/aframe/build/aframe-ar.js"></script>
+    <title>Marker-based AR</title>
+    <script src="https://aframe.io/releases/1.2.0/aframe.min.js"></script>
+    <script src="https://cdn.rawgit.com/jeromeetienne/AR.js/1.7.5/aframe/build/aframe-ar.js"></script>
   </head>
   <body style="margin: 0; overflow: hidden">
-    <a-scene embedded arjs="sourceType: webcam;">
-      <!-- 3D content will go here -->
-      <!-- Example: <a-box position="0 0.5 0" rotation="0 45 0" color="#4CC3D9"></a-box> -->
+    <a-scene embedded arjs="trackingMethod: best; sourceType: webcam;">
+      <a-assets>
+        <a-asset-item
+          id="custom-model"
+          src="assets/DuckRubberHat.gltf"
+        ></a-asset-item>
+      </a-assets>
+      <!-- Using the 'hiro' preset marker -->
+      <a-marker preset="hiro">
+        <a-entity
+          gltf-model="#custom-model"
+          scale="0.05 0.05 0.05"
+          position="0 0 0"
+          rotation="0 0 0"
+        ></a-entity>
+      </a-marker>
+      <a-entity camera></a-entity>
     </a-scene>
   </body>
 </html>
