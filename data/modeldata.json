@@ -1,0 +1,19 @@
+[
+    {
+      "id": "model1",
+      "modelSrc": "assets/custom_text1.gltf",
+      "markerPattern": "assets/markers/pattern-u327-text.patt",
+      "scale": "0.2 0.2 0.2",
+      "position": "0 0 0",
+      "rotation": "0 0 0"
+    },
+    {
+      "id": "model2",
+      "modelSrc": "assets/DuckRubberHat.gltf",
+      "markerPattern": "assets/markers/pattern-Mensa.patt",
+      "scale": "0.2 0.2 0.2",
+      "position": "0 0 0",
+      "rotation": "0 0 0"
+    }
+]
+  

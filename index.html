@@ -13,36 +13,8 @@
       vr-mode-ui="enabled: false;"
       arjs="debugUIEnabled: false;"
     >
-      <a-assets>
-        <a-asset-item
-          id="custom-model"
-          src="assets/custom_text1.gltf"
-        ></a-asset-item>
-        <a-asset-item
-          id="duck-model"
-          src="assets/DuckRubberHat.gltf"
-        ></a-asset-item>
-      </a-assets>
-      <!-- Using your custom .patt marker -->
-      <a-marker type="pattern" url="assets/markers/pattern-u327-text.patt">
-        <a-entity
-          gltf-model="#custom-model"
-          scale="0.2 0.2 0.2"
-          position="0 0 0"
-          rotation="0 0 0"
-        ></a-entity>
-      </a-marker>
-
-      <!-- Using your custom .patt marker -->
-      <a-marker type="pattern" url="assets/markers/pattern-Mensa.patt">
-        <a-entity
-          gltf-model="#duck-model"
-          scale="0.2 0.2 0.2"
-          position="0 0 0"
-          rotation="0 0 0"
-        ></a-entity>
-      </a-marker>
       <a-entity camera></a-entity>
+
       <button
         style="
           height: 40px;
@@ -51,7 +23,12 @@
           bottom: 20px;
           left: 400px;
         "
-      ></button>
+      >
+        Click me :)
+      </button>
     </a-scene>
+
+    <!-- loads entities, assets, markers -->
+    <script src="/scripts/loadmodeldata.js"></script>
   </body>
 </html>
