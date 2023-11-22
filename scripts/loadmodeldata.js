@@ -29,6 +29,13 @@ fetch("../data/modeldata.json")
 
       // Append marker to scene
       scene.appendChild(marker);
+
+      marker.addEventListener("markerFound", (e) => {
+        document.getElementById("myButton").style.display = "block";
+      });
+      marker.addEventListener("markerLost", (e) => {
+        document.getElementById("myButton").style.display = "none";
+      });
     });
   })
   .catch((error) => console.error("Error loading JSON:", error));
