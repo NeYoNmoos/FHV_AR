@@ -5,7 +5,8 @@
       "markerPattern": "assets/markers/pattern-u327-text.patt",
       "scale": "0.2 0.2 0.2",
       "position": "0 0 0",
-      "rotation": "0 0 0"
+      "rotation": "0 0 0",
+      "link": "https://www.fhv.at/fh/die-fhv/campus/mensa-cafeschraeg"
     },
     {
       "id": "model2",
@@ -13,7 +14,8 @@
       "markerPattern": "assets/markers/pattern-Mensa.patt",
       "scale": "0.2 0.2 0.2",
       "position": "0 0 0",
-      "rotation": "0 0 0"
+      "rotation": "0 0 0",
+      "link": "https://www.fhv.at/"
     }
 ]
   

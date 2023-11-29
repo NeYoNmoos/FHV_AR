@@ -1,3 +1,5 @@
+let currentLink = ""; // Variable to store the current link
+
 fetch("../data/modeldata.json")
   .then((response) => response.json())
   .then((data) => {
@@ -31,11 +33,24 @@ fetch("../data/modeldata.json")
       scene.appendChild(marker);
 
       marker.addEventListener("markerFound", (e) => {
+        currentLink = item.link;
         document.getElementById("myButton").style.display = "block";
       });
       marker.addEventListener("markerLost", (e) => {
         document.getElementById("myButton").style.display = "none";
       });
     });
+
+    // Button event listener (outside the loop)
+    const button = document.getElementById("myButton");
+    button.addEventListener("click", openLink);
+
+    function openLink() {
+      console.log("Click");
+      if (currentLink) {
+        window.open(currentLink, "_blank"); // Open the current link in a new tab
+      }
+    }
+    console.log(button);
   })
   .catch((error) => console.error("Error loading JSON:", error));
