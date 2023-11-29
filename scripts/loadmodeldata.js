@@ -36,8 +36,12 @@ fetch("../data/modeldata.json")
         currentLink = item.link;
         document.getElementById("myButton").style.display = "block";
       });
+
+      // button disappears after a few seconds
       marker.addEventListener("markerLost", (e) => {
-        document.getElementById("myButton").style.display = "none";
+        setTimeout(() => {
+          document.getElementById("myButton").style.display = "none"; // button disappears
+        }, 2000); // 2 second delay
       });
     });
 
